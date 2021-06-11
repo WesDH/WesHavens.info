@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+
+/* Adding All My Section Tag Fixed Padding */
+section{
+    padding:80px;
+}
+
+/* Creating Banner Area in CSS */
+.banner{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
