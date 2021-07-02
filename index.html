@@ -9,149 +9,249 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
 </head>
 <body>
-	<!-- Creating Menu Tabs & Logo at Top using HTML -->
-	<header>
-		<a href="#" class="logo">Portfolio</a>
-		<ul>
-			<li><a href="#home">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#knowledge">Knowledge</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#testimonials">Testimonials</a></li>
-			<li><a href="#contact">Contact.</a></li>
-		</ul>
-	</header>
+<!-- Creating Menu Tabs & Logo at Top using HTML -->
+<header>
+	<a href="#" class="logo">Portfolio</a>
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#knowledge">Knowledge</a></li>
+		<li><a href="#work">Projects</a></li>
+		<li><a href="#testimonials">Testimonials</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+</header>
 
 
-	<!-- Creating Banner Layout in HTML -->
-	<section class="banner" id="home">
-		<div class="textBx">
-			<h2 class="intro">Hello, I'm<br><span>Wesley Havens</span></h2>
-			<h3>and I'm a Software Developer.</h3>
-			<a href="#about" class="btn" style="background:#009e66;">About me</a>
+<!-- Creating Banner Layout in HTML -->
+<section class="banner" id="home">
+	<div class="textBx">
+		<h2 class="intro">Hello, I'm<br><span>Wesley Havens</span></h2>
+		<h3>and I'm a Software Developer.</h3>
+		<a href="#about" class="btn" style="background:#009e66;">About me</a>
+	</div>
+	
+	
+	<div class="scroll_down">
+		<h6>&#8595; Scroll down for more &#8595;</h6>
+	</div>
+
+</section>
+
+
+<!-- Creating About Me Layout in HTML -->
+<a class="about-anchor" id="about"></a> <!-- use CSS to adjust height of the # link auto scroll -->
+<section class="about">
+	<div class="heading">
+		<p>Get to Know me</p>
+		<h2>About Me </h2>
+	</div>
+	<div class="content">
+		<div class="w50">
+			<img src="images/my_pic3.png" alt="" class="proPic">
 		</div>
-
-
-		<div class="scroll_down">
-			<h6>&#8595; Scroll down for more &#8595;</h6>
-		</div>
-
-	</section>
-
-
-
-	<!-- Creating About Me Layout in HTML -->
-	<section class="about" id="about">
-		<div class="heading">
-			<p>Get to Know me</p>
-			<h2>About Me </h2>
-		</div>
-		<div class="content">
-			<div class="w50">
-				<img src="images/my_pic3.png" alt="" class="proPic">
-			</div>
-			<div class="contentBx w50">
-				<h3>Who am I?</h3>
-				<h2>I'm <b>Wes Havens</b>, a student of Computer Science at Oregon State University, and an entry level software
+		<div class="contentBx w50">
+			<h3>Who am I?</h3>
+			<h2>I'm <b>Wes Havens</b>, a student of Computer Science at Oregon State University, and an entry level
+				software
 				developer. </h2><br>
-				<p>When I'm not at work, I enjoy studying towards a Computer Science degree and working on personal coding projects.
-				</p><br>
-				<p>
-					Other hobbies include spending time with my wife and three dogs. I also enjoy wind-sports, and for that I am an experienced kitesurfer
-					with 5 years of experience. I would also like to learn windsurfing, but when time and budget allow.
-					I have been known to play games on PC, but not on console.
-				</p>
-				<div class="heading_bottom">
-					<!--		Inline CSS below to over ride Bootstrap			-->
-					<a href="images/WesleyHavens_resume2021.pdf" target="_blank"  class="btn round" style="background:#009e66;">Download Resume</a>
-					
-					<a href="https://github.com/WesDH" target="_blank"  class="btn round" style="background:#009e66;">My GitHub</a>
-					<div class="bt">
-						<b>Name:</b> Wesley Dean Havens<br>
+			<p>When I'm not at work, I enjoy studying towards a Computer Science degree and working on personal coding
+				projects.
+			</p><br>
+			<p>
+				Other hobbies include spending time with my wife and three dogs. I also enjoy wind-sports, and for that
+				I am an experienced kitesurfer
+				with six years of experience. I would also like to learn windsurfing when I have the opportunity.
+				I have been known to play games on PC, but not on console.
+			</p>
+			<div class="heading_bottom">
+				<!--		Inline CSS below to over ride Bootstrap			-->
+				<a href="files/WesleyHavens_resume2021.pdf" target="_blank" class="btn round"
+				   style="background:#009e66;">Download Resume</a>
+				
+				<a href="https://github.com/WesDH" target="_blank" class="btn round" style="background:#009e66;">My
+					GitHub</a>
+				<div class="bt">
+					<b>Name:</b> Wesley Dean Havens<br>
+				</div>
+				<div class="bt">
+					<b>Email:</b> wesleydh85@gmail.com<br>
+					<b>Location: </b> Houston, TX.
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Creating Knowledge Layout in HTML -->
+<a class="knowledge-anchor" id="knowledge"></a> <!-- use CSS to adjust height of the # link auto scroll -->
+<section class="knowledge">
+	<div class="heading white">
+		<h2>My Knowledge</h2>
+		<p>Languages/Frameworks I am familiar with:</p>
+	</div>
+	<div class="content">
+		<div class="servicesBox">
+			<i class="fa fa-cogs fa-4x"></i>
+			<h3>Python</h3>
+			<p>Primary language taught in many of my classes.</p>
+		</div>
+		<div class="servicesBox">
+			<i class="fa fa-link fa-4x"></i>
+			<h3>HTML/CSS</h3>
+			<p></p>
+		</div>
+		<div class="servicesBox">
+			<i class="fa fa-coffee fa-4x"></i>
+			<h3>JavaScript</h3>
+			<p>Familiar with this from CS290 Web-Dev, and personal projects</p>
+		</div>
+		
+		<!-- <div class="servicesBreak"></div>-->
+		
+		<div class="servicesBox">
+			<i class="fa fa-linode fa-4x"></i>
+			<h3>Node.Js</h3>
+			<p>Familiar with this from CS290 Web-Dev, and personal projects</p>
+		</div>
+		<div class="servicesBox">
+			<i class="fa fa-table fa-4x"></i>
+			<h3>MySQL</h3>
+			<p>Knowledge after implementation of a Full-stack App.</p>
+		</div>
+		<div class="servicesBox">
+			<i class="fa fa-graduation-cap fa-4x"></i>
+			<h3>Things I'm interested in learning:</h3>
+			<p>Java, Android development, Flask</p>
+		</div>
+	</div>
+</section>
+
+<!-- Creating Project Layout in HTML -->
+<a class="work-anchor" id="work"></a> <!-- use CSS to adjust height of the # link auto scroll -->
+<section class="work">
+	<br>
+	<div class="heading">
+		<h2>My latest projects:</h2>
+		<p>Showcasing some of my <b>personal projects</b>.</p>
+	</div>
+	<div class="content">
+		<div class="workBx">
+			<a href="http://weshavens.info/CS290HW6/" target="_blank">
+				<img src="images/proj_CRUD.png" alt="">
+				<p>Full-stack Create, Read, Update, Delete App. Uses HTML/CSS/Js/Node.JS/MySQL</p>
+			</a>
+		</div>
+		
+		<div class="workBx">
+			<a href="https://weshavens.info/mastermind/" target="_blank">
+				<img src="images/proj_mastermind.png" alt="">
+				<p>Mastermind: A classic puzzle solving board game implemented in Javascript/HTML/CSS. A work in
+					progress for summer 2020, I'm building this as a project for my CS361: Software Development class.
+					Check back for updates on this AAA release!</p>
+			</a>
+		</div>
+		
+		<div class="workBx">
+			<a href="https://github.com/WesDH/CS162_PortfolioProject" target="_blank">
+				<img src="images/proj_focus.png" alt="FocusGame: A console based game written exclusively in Python.">
+				<p>FocusGame: A console based game written exclusively in Python.</p>
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- Creating Testimonial Layout in HTML -->
+<a class="testimonials-anchor" id="testimonials"></a> <!-- use CSS to adjust height of the # link auto scroll -->
+<section class="testimonials">
+	<br>
+	<div class="heading white">
+		<h2>Testimonials</h2>
+	</div>
+	<div class="content">
+		<div class="testimonialBx">
+			<p>I've known Wes for the past nine months, we met while taking CS 161 together at OSU. In my time that I've
+				known Wes, he has been studious and proactive in completing coursework.
+				I can personally attest for our web development class, he was of great assistance in helping me
+				understand node.JS and Express Handlebars for one of our assignments. I believe Wes will make
+				an excellent software designer and team player wherever he may end up. Thanks Wes.</p>
+			<h3> Michael Dobbins<br>Fellow student at Oregon State University</h3>
+		</div>
+		<!--			<div class="testimonialBx">-->
+		<!--				<p></p>-->
+		<!--				<h3> <br></h3>-->
+		<!--			</div>-->
+	</div>
+</section>
+
+
+<!-- Creating Contact Layout in HTML -->
+<section class="contact" id="contact">
+	<div class="heading white">
+		<p>Feel free to contact me anytime.</p>
+		<h2>Get in Touch</h2>
+	</div>
+	<div class="content">
+		
+		<div class="contactInfo">
+			<h3>Contact Info</h3>
+			<p>Feel free to contact me anytime.</p>
+			<div class="contactInfoBx">
+				<div class="box">
+					<div class="icon">
+						<i class="fa fa-map-marker"></i>
 					</div>
-					<div class="bt">
-						<b>Email:</b> wesleydh85@gmail.com<br>
-						<b>Location: </b> Houston, TX.
+					<div class="text">
+						<h3>Location</h3>
+						<address>Houston, TX</address>
+					</div>
+				</div>
+				
+				<div class="box">
+					<div class="icon">
+						<i class="fa fa-phone"></i>
+					</div>
+					<div class="text">
+						<h3>Phone no:</h3>
+						<p>832-790-3862</p>
+					</div>
+				</div>
+				
+				<div class="box">
+					<div class="icon">
+						<i class="fa fa-envelope-o"></i>
+					</div>
+					<div class="text">
+						<h3>Email Address</h3>
+						<p>wesleydh85@gmail.com</p>
+					</div>
+				</div>
+				<br>
+				<h3>Social Connect</h3>
+				<div class="boxSocial">
+					<div class="icon">
+						
+						<a href="https://www.linkedin.com/in/wesley-havens-63a2681ab/" target="_blank">
+							<i class="fa fa-linkedin-square"></i>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<!-- Creating Knowledge Layout in HTML -->
-	<section class="knowledge" id="knowledge">
-		<div class="heading white">
-			<h2>My Knowledge</h2>
-			<p>Languages/Frameworks I am familiar with:</p>
+		<div class="formBx">
+			<form action="">
+				<h3>Message Me</h3>
+				<input type="text" placeholder="Full Name">
+				<input type="email" placeholder="Email">
+				<textarea name="" id="" placeholder="Your Message"></textarea>
+				<input type="submit" value="Send Message" name="">
+			</form>
 		</div>
-		<div class="content">
-			<div class="servicesBox">
-				<i class="fa fa-cogs fa-4x"></i>
-				<h3>Python</h3>
-				<p>Primary language taught in many of my classes.</p>
-			</div>
-			<div class="servicesBox">
-				<i class="fa fa-link fa-4x"></i>
-				<h3>HTML/CSS</h3>
-				<p></p>
-			</div>
-			<div class="servicesBox">
-				<i class="fa fa-coffee fa-4x"></i>
-				<h3>JavaScript</h3>
-				<p>Familiar with this from CS290 Web-Dev, and personal projects</p>
-			</div>
+	</div>
+</section>
 
-<!--			<div class="servicesBreak"></div>-->
 
-			<div class="servicesBox">
-				<i class="fa fa-linode fa-4x"></i>
-				<h3>Node.Js</h3>
-				<p>Familiar with this from CS290 Web-Dev, and personal projects</p>
-			</div>
-			<div class="servicesBox">
-				<i class="fa fa-table fa-4x"></i>
-				<h3>MySQL</h3>
-				<p>Basic knowledge after implementation of a Full-stack App, and cloud deployment of a MySQL server.</p>
-			</div>
-			<div class="servicesBox">
-				<i class="fa fa-graduation-cap fa-4x"></i>
-				<h3>I'm interested in learning:</h3>
-				<p>Java, Android development, Flask</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- Creating Project Layout in HTML -->
-	<section class="work" id="work">\
-		<br>
-		<div class="heading">
-			<h2>My latest projects:</h2>
-			<p>Showcasing some of my <b>personal projects</b>.</p>
-		</div>
-		<div class="content">
-			<div class="workBx">
-				<a href="http://weshavens.info/CS290HW6/" target="_blank">
-					<img src="images/proj_CRUD.png" alt="">
-					<p>Full-stack Create, Read, Update, Delete App. Uses HTML/CSS/Js/Node.JS/MySQL</p>
-				</a>
-			</div>
-			
-			<div class="workBx">
-				<a href="https://weshavens.info/mastermind/" target="_blank">
-					<img src="images/proj_mastermind.png" alt="">
-					<p>Mastermind: A classic puzzle solving board game implemented in Javascript/HTML/CSS. A work in progress for summer 2020, I'm building this as a project for my CS361: Software Development class. Check back for updates on this AAA release!</p>
-				</a>
-			</div>
-			
-			<div class="workBx">
-				<a href="https://github.com/WesDH/CS162_PortfolioProject" target="_blank">
-					<img src="images/proj_focus.png" alt="">
-					<p>FocusGame: A console based game written exclusively in Python.</p>
-				</a>
-			</div>
-			
-		</div>
-	</section>
 
 </body>
 <script src="ext.js" language="JavaScript"></script>

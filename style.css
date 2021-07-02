@@ -20,7 +20,7 @@ section{
     justify-content: space-between;
     align-items: center;
     background: #111;
-    background: url("images/my_pic5.jpg");
+    background: url("images/landing-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 75% 0%;
@@ -83,8 +83,9 @@ section{
 }
 
 .heading h2{
-    font-style: italic;
+    font-style: normal;
     font-size: 3em;
+    font-weight: 500;
     color: #009e66;
 }
 
@@ -189,10 +190,23 @@ header.sticky ul li a{
     height: 100vh;
 }
 
+/*Adjust behavior of autoscroll to Knowledge section to adjust for horizontal bar blocking*/
+a.about-anchor,
+a.knowledge-anchor,
+a.work-anchor,
+a.testimonials-anchor
+{
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+}
+
 .knowledge
 {
     background: #111111;
     padding-top: 20px;
+    height: 60vh; /* Edit for more vertical height*/
 }
 
 .heading p{
@@ -233,4 +247,147 @@ header.sticky ul li a{
 .knowledge .content .servicesBox .fa {
     color:  #009e66;
     padding-bottom: 5px;
+}
+
+/* Added to space project images evenly, and scale evenly */
+/*.workBx {*/
+/*    width: 25vw;*/
+/*    text-align: center;*/
+/*}*/
+
+.work .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-display: row;
+    height: 100vh;
+}
+
+.work .content .workBx{
+    width: 500px;
+    padding: 20px;
+}
+
+.work .content .workBx img{
+    max-width: 100%;
+    border: 1px solid rgba(0,0,0,4)
+}
+
+.work .content .workBx img:hover {
+    box-shadow: 0 0 20px 5px #ccc;
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+.work .content .workBx p{
+    text-align: center;
+}
+
+.work .content .workBx a:link,
+.work .content .workBx a:visited,
+.work .content .workBx a:active
+{
+    color: #161616;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.testimonials{
+    background: #111111;
+}
+
+.testimonials .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.testimonials .content .testimonialBx{
+    background: #161616;
+    margin: 20px;
+    padding: 60px 40px;
+    max-width: calc(50% - 40px);
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    cursor: pointer;
+}
+
+.testimonials .content .testimonialBx:hover{
+    border-bottom: 2px solid #009e66;
+}
+
+.testimonials .content .testimonialBx p{
+    color: #ffffff;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "Times New Roman", Times, Serif;
+    line-height: 24px;
+
+}
+
+.testimonials .content .testimonialBx h3{
+    color: #009e66;
+    margin-top: 40px;
+    text-align: end;
+    font-weight: 200;
+    line-height: 1.7em;
+    font-style: italic;
+    font-size: 20px;
+}
+
+/* Designing Contact Layout in CSS */
+.contact{
+    background: #111;
+}
+
+.formBx{
+    min-width: 60%;
+
+}
+
+.formBx form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.formBx form input,
+.formBx form textarea{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    outline: none;
+    background: #161616;
+    color: #fff;
+    resize: vertical;
+}
+
+.formBx form input:focus,
+.formBx form textarea:focus {
+    border-bottom: 1px solid #009e66;
+    transition: 0.5s;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder{
+    color: #999;
+}
+
+.formBx form input[type="submit"] {
+    background: #009e66;
+    max-width: 250px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 50px;
+
 }
