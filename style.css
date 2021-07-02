@@ -20,7 +20,7 @@ section{
     justify-content: space-between;
     align-items: center;
     background: #111;
-    background: url("images/my_pic4.jpg");
+    background: url("images/my_pic5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 75% 0%;
@@ -100,7 +100,7 @@ section{
 
 .proPic{
     width: 440px;
-    height: 310px; /* not a 1:1 ratio. Original 800w x 600h */
+    height: auto;
     border-top-right-radius: 2%;
     border-bottom-left-radius: 2%;
 }
@@ -183,6 +183,10 @@ header ul li a{
 header.sticky .logo,
 header.sticky ul li a{
     color: #111111;
+}
+
+.about{
+    height: 100vh;
 }
 
 .knowledge
