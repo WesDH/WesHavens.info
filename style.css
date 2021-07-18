@@ -92,6 +92,7 @@ section{
 .content{
     display: flex;
     justify-content: space-between;
+    /*flex-wrap: wrap; Added 7/17/2021 for responsive resizing */
 }
 
 .contentBx{
@@ -116,6 +117,7 @@ section{
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap; /*Added 7/17/2021 for responsive resizing */
 }
 
 .btn.round{
@@ -187,26 +189,27 @@ header.sticky ul li a{
 }
 
 .about{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /*Adjust behavior of autoscroll to Knowledge section to adjust for horizontal bar blocking*/
 a.about-anchor,
 a.knowledge-anchor,
 a.work-anchor,
-a.testimonials-anchor
+a.testimonials-anchor,
+a.contact-anchor
 {
     display: block;
     position: relative;
-    top: -80px;
+    top: -78px;
     visibility: hidden;
 }
 
 .knowledge
 {
-    background: #111111;
+    background: #2A2A2AFF;
     padding-top: 20px;
-    height: 60vh; /* Edit for more vertical height*/
+    min-height: 100vh; /* Edit for more vertical height*/
 }
 
 .heading p{
@@ -255,16 +258,19 @@ a.testimonials-anchor
 /*    text-align: center;*/
 /*}*/
 
+.work {
+    min-height: 100vh;
+}
+
 .work .content {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    flex-display: row;
-    height: 100vh;
+    /*flex-wrap: wrap;*/
+    flex-direction: row;
 }
 
 .work .content .workBx{
-    width: 500px;
+    /*width: 500px;*/
     padding: 20px;
 }
 
@@ -338,13 +344,20 @@ a.testimonials-anchor
 
 /* Designing Contact Layout in CSS */
 .contact{
-    background: #111;
+    background: #2A2A2AFF;
+    min-height: 100vh;
 }
 
 .formBx{
     min-width: 60%;
 
 }
+
+.formBx form div h2{
+    color: #fff;
+    text-align: center;
+}
+
 
 .formBx form{
     display: flex;
@@ -389,5 +402,256 @@ a.testimonials-anchor
     cursor: pointer;
     font-weight: 600;
     border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
 
+.contactInfo{
+    min-width: 40%;
+
+}
+
+.contactInfo p{
+    color: #999;
+}
+
+.contactInfoBx{
+    position: relative;
+}
+
+.contactInfoBx .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactInfoBx .box .icon{
+    color: #fff;
+    min-width: 40px;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+
+.contactInfoBx .box .text{
+    color: #999;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactInfoBx .box .text h3{
+    color: #009e66;
+    font-weight: 500;
+    margin: 0;
+}
+
+.contactInfoBx .box .text p,address{
+    font-style: normal;
+    font-weight: 300;
+    color: #999;
+}
+
+.contactInfoBx .boxSocial {
+    display: flex;
+    flex-direction: row;
+    padding-left: 60px;
+    letter-spacing: 15px;
+    padding-bottom: 30px;
+}
+
+.contactInfoBx .boxSocial .fa{
+    font-size: 42px;
+    color: #009e66;
+    cursor: pointer;
+}
+
+/*Design Footer Layout in CSS*/
+footer.copyright {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Adding Some Responsive Layout */
+@media (max-width: 991px)
+{
+    header,
+    header.sticky{
+        padding: 20px 50px;
+    }
+
+    header .menu {
+        display: none;
+    }
+
+    header .menu {
+        position: fixed;
+        background: #fff;
+        display: block;
+        top: 76px;
+        left: -100%;
+        padding: 100px 50px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+    }
+
+    header .menu.active {
+        position: fixed;
+        background: #fff;
+        display: block;
+        top: 76px;
+        left: 0;
+        padding: 100px 50px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    header ul li a {
+        font-size: 20px;
+        color: #111;
+        font-weight: 400;
+        margin: 10px 0;
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background-image: url("images/menu.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .toggle.active {
+        width: 40px;
+        height: 40px;
+        background-image: url("images/close.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+
+    header.sticky .toggle {
+        filter: invert(1);
+    }
+
+    section {
+        padding:100px 30px;
+    }
+
+    .banner {
+        padding: 150px 50px 70px;
+    }
+
+    .banner h2 {
+        font-size: 1.5em;
+    }
+
+    .banner h3 {
+        font-size: 1em;
+    }
+
+    .textBx{
+        position: relative;
+        top:270px;
+    }
+
+    .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 50px;
+    }
+
+    .work .content {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .contentBx{
+        padding: 0;
+    }
+
+    .content .w50 img {
+        display: block;
+        margin: 0 auto 30px auto;
+    }
+
+    .contentBx h2{
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .contentBx h3{
+        font-size: 20px;
+    }
+    .services .content .servicesBx{
+        margin:10px;
+    }
+    .contactInfo{
+        margin:10px 0;
+    }
+}
+
+@media (max-width: 768px){
+    .testimonial .content .testimonialBx{
+        max-width: calc(100% - 20px);
+        padding: 40px 20px;
+        margin: 30px;
+    }
+    .heading.bottom{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction:row;
+    }
+}
+
+@media (max-width: 600px){
+    .testimonial .content .testimonialBx{
+        max-width: calc(100% - 20px);
+        padding: 40px 20px;
+        margin: 30px;
+    }
+
+    .work .content .workBx img,p{
+        max-width: 90%;
+    }
+
+
+    .heading.bottom{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction:column;
+    }
+
+    .contact .formBx form > input,textarea{
+        max-width: 70%;
+    }
+
+
+    .textBx {
+        position: relative;
+        top: 150px;
+    }
+
+    .intro {
+        color: #fff;
+    }
 }

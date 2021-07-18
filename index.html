@@ -12,13 +12,14 @@
 <!-- Creating Menu Tabs & Logo at Top using HTML -->
 <header>
 	<a href="#" class="logo">Portfolio</a>
-	<ul>
-		<li><a href="#home">Home</a></li>
-		<li><a href="#about">About</a></li>
-		<li><a href="#knowledge">Knowledge</a></li>
-		<li><a href="#work">Projects</a></li>
-		<li><a href="#testimonials">Testimonials</a></li>
-		<li><a href="#contact">Contact</a></li>
+	<div class="toggle" onclick="toggleMenu();"></div>
+	<ul class="menu">
+		<li><a href="#home" onclick="toggleMenu();">Home</a></li>
+		<li><a href="#about" onclick="toggleMenu();">About</a></li>
+		<li><a href="#knowledge" onclick="toggleMenu();">Knowledge</a></li>
+		<li><a href="#work" onclick="toggleMenu();">Projects</a></li>
+<!--		<li><a href="#testimonials">Testimonials</a></li>-->
+		<li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
 	</ul>
 </header>
 
@@ -43,7 +44,7 @@
 <a class="about-anchor" id="about"></a> <!-- use CSS to adjust height of the # link auto scroll -->
 <section class="about">
 	<div class="heading">
-		<p>Get to Know me</p>
+		<p></p>
 		<h2>About Me </h2>
 	</div>
 	<div class="content">
@@ -51,7 +52,7 @@
 			<img src="images/my_pic3.png" alt="" class="proPic">
 		</div>
 		<div class="contentBx w50">
-			<h3>Who am I?</h3>
+			<h3><b>Who am I?</b></h3>
 			<h2>I'm <b>Wes Havens</b>, a student of Computer Science at Oregon State University and an entry level
 				software
 				developer. </h2><br>
@@ -99,7 +100,7 @@
 		<div class="servicesBox">
 			<i class="fa fa-link fa-4x"></i>
 			<h3>HTML/CSS</h3>
-			<p></p>
+			<p>General web-app projects</p>
 		</div>
 		<div class="servicesBox">
 			<i class="fa fa-coffee fa-4x"></i>
@@ -147,8 +148,7 @@
 			<a href="https://weshavens.info/mastermind/" target="_blank">
 				<img src="images/proj_mastermind.png" alt="">
 				<p>Mastermind: A classic puzzle solving board game implemented in Javascript/HTML/CSS. A work in
-					progress for summer 2020, I'm building this as a project for my CS361: Software Development class.
-					Check back for updates on this AAA release!</p>
+					progress for summer 2021.</p>
 			</a>
 		</div>
 		
@@ -162,33 +162,34 @@
 </section>
 
 <!-- Creating Testimonial Layout in HTML -->
-<a class="testimonials-anchor" id="testimonials"></a> <!-- use CSS to adjust height of the # link auto scroll -->
-<section class="testimonials">
-	<br>
-	<div class="heading white">
-		<h2>Testimonials</h2>
-	</div>
-	<div class="content">
-		<div class="testimonialBx">
-			<p>I've known Wes for the past nine months, we met while taking CS 161 together at OSU. In my time that I've
-				known Wes, he has been studious and proactive in completing coursework.
-				I can personally attest for our web development class, he was of great assistance in helping me
-				understand node.JS and Express Handlebars for one of our assignments. I believe Wes will make
-				an excellent software designer and team player wherever he may end up. Thanks Wes.</p>
-			<h3> Michael Dobbins<br>Fellow student at Oregon State University</h3>
-		</div>
-		<!--			<div class="testimonialBx">-->
-		<!--				<p></p>-->
-		<!--				<h3> <br></h3>-->
-		<!--			</div>-->
-	</div>
-</section>
+<!--<a class="testimonials-anchor" id="testimonials"></a> &lt;!&ndash; use CSS to adjust height of the # link auto scroll &ndash;&gt;-->
+<!--<section class="testimonials">-->
+<!--	<br>-->
+<!--	<div class="heading white">-->
+<!--		<h2>Testimonials</h2>-->
+<!--	</div>-->
+<!--	<div class="content">-->
+<!--		<div class="testimonialBx">-->
+<!--			<p>I've known Wes for the past nine months, we met while taking CS 161 together at OSU. In my time that I've-->
+<!--				known Wes, he has been studious and proactive in completing coursework.-->
+<!--				I can personally attest for our web development class, he was of great assistance in helping me-->
+<!--				understand node.JS and Express Handlebars for one of our assignments. I believe Wes will make-->
+<!--				an excellent software designer and team player wherever he may end up. Thanks Wes.</p>-->
+<!--			<h3> Michael Dobbins<br>Fellow student at Oregon State University</h3>-->
+<!--		</div>-->
+<!--		&lt;!&ndash;			<div class="testimonialBx">&ndash;&gt;-->
+<!--		&lt;!&ndash;				<p></p>&ndash;&gt;-->
+<!--		&lt;!&ndash;				<h3> <br></h3>&ndash;&gt;-->
+<!--		&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--	</div>-->
+<!--</section>-->
 
 
 <!-- Creating Contact Layout in HTML -->
+<a class="contact-anchor" id="contact"></a> <!-- use CSS to adjust height of the # link auto scroll -->
 <section class="contact" id="contact">
 	<div class="heading white">
-		<p>Feel free to contact me anytime.</p>
+		<p></p>
 		<h2>Get in Touch</h2>
 	</div>
 	<div class="content">
@@ -238,20 +239,31 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="formBx">
-			<form action="">
+			<form action="https://script.google.com/macros/s/AKfycbziQ9_-THc2tRYhNAaCM8t7aJNxwWMW6ysT6fOngIxQbJaxPDxDgN_iPlln0n1nX1GR/exec"
+		      id="mailto" class="gform" method="POST"> <!--	data-email="wesleydh85@gmail.com"-->
 				<h3>Message Me</h3>
-				<input type="text" placeholder="Full Name">
-				<input type="email" placeholder="Email">
-				<textarea name="" id="" placeholder="Your Message"></textarea>
-				<input type="submit" value="Send Message" name="">
+				<input type="text" placeholder="Full Name" name="name">
+				<input type="email" placeholder="Email" name="email">
+				<input type="text" placeholder="Your Message" name="message">
+				<!-- <textarea name="" id="" rows="6" placeholder="Your Message" name="message"></textarea> -->
+				<input type="submit" value="Send Message" name="" id="submitMessage">
+				<div style="display:none" class="thankyou_message">
+					<!-- You can customize the thank you message by editing the code below -->
+					<br><h2><u>Thanks</u> for contacting me! I will get back to you as soon as I can.
+					</h2>
+				</div>
 			</form>
 		</div>
 	</div>
 </section>
 
-
-
+<!--Creating Footer Layout in HTML-->
+<footer class="copyright">
+	<p>&copy; 2021 &nbsp;&nbsp; www.weshavens.info</p>
+</footer>
 </body>
 <script src="ext.js" language="JavaScript"></script>
+<script data-cfasync="false" src="form_submission_handler.js" language="JavaScript"></script>
 </html>
